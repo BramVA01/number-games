@@ -12,7 +12,7 @@ def main():
     print(give_solutions(limit_to_z))
 
 
-limit_to_z = 10
+limit_to_z = 20
 """def give_solutions(limit):
     sol =[]
     for i in range(0,limit):
@@ -38,4 +38,6 @@ if __name__ == "__main__":
     main()
 
 
-"""if pythagorean_triplets(limit):"""
+"""if pythagorean_triplets(limit):
+"""
+#dededede
