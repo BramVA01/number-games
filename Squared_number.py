@@ -24,17 +24,18 @@ def give_solutions(limit):
     sol_x=[]
     sol_y=[]
     sol_i=[]
-    for i in range(0,limit):
-        for x in range(0,limit):
-            for y in range(0,limit):
+    for i in range(1,limit):
+        for x in range(1,limit):
+            for y in range(1,limit):
                 if x**2 + y**2 == i**2:
                     sol_x = [sol_x, x]
                     sol_y = [sol_y, y]
                     sol_i = [sol_i, i]
-    return sol_x,sol_y
+    return [sol_x,sol_y,sol_i]
 
 
 if __name__ == "__main__":
     main()
 
 
+"""if pythagorean_triplets(limit):"""
