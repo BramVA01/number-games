@@ -35,7 +35,7 @@ def give_solutions(limit):
             for y in range(1,limit):
                 if x**2 + y**2 == i**2:
                     solutions.append([x,y,i])
-    return [solutions]
+    return solutions
 
 
 if __name__ == "__main__":
