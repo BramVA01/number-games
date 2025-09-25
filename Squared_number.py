@@ -1,26 +1,28 @@
+import time
+import numpy as np
+
 original_number = 2
 
 def square(number):
     return number**2
 
-
 print(square(original_number))
+
+limit_to_z = 100
 
 
 def main():
+    start_time = time.time()
     print(square(original_number))
     print(give_solutions(limit_to_z))
+    end_time = time.time()
+
+    print(end_time - start_time)
 
 
-limit_to_z = 20
-"""def give_solutions(limit):
-    sol =[]
-    for i in range(0,limit):
-        equation = Eq(x**2 + y**2 - i**2)
-        sol = [sol,solve(equation)]
-    return sol"""
 
-def give_solutions(limit):
+
+def give_solutions(limit: int) -> tuple([tuple([int])]):
     """
     1. Initialize
     2. Loops
@@ -29,13 +31,22 @@ def give_solutions(limit):
     5. Checks
     6. Returns
     """
+
+    if not isinstance(limit, int):
+        raise TypeError("Limit is of the wrong type")
+
     solutions = []
-    for i in range(1,limit):
-        for x in range(1,limit):
-            for y in range(1,limit):
-                if x**2 + y**2 == i**2:
+    singles = np.arange(1,limit)
+    squares = singles ** 2
+
+    for i in squares:
+        for x in squares:
+            for y in squares:
+                if x + y == i:
                     solutions.append([x,y,i])
-    return solutions
+    return np.sqrt(solutions)
+    
+
 
 
 if __name__ == "__main__":
