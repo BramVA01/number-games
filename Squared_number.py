@@ -6,3 +6,8 @@ def square(number):
 
 
 print(square(original_number))
+
+
+def main():
+    pass
+
