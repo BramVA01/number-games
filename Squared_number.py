@@ -21,17 +21,21 @@ limit_to_z = 20
     return sol"""
 
 def give_solutions(limit):
-    sol_x=[]
-    sol_y=[]
-    sol_i=[]
+    """
+    1. Initialize
+    2. Loops
+    3. Loops
+    4. Loops
+    5. Checks
+    6. Returns
+    """
+    solutions = []
     for i in range(1,limit):
         for x in range(1,limit):
             for y in range(1,limit):
                 if x**2 + y**2 == i**2:
-                    sol_x = [sol_x, x]
-                    sol_y = [sol_y, y]
-                    sol_i = [sol_i, i]
-    return [sol_x,sol_y,sol_i]
+                    solutions.append([x,y,i])
+    return [solutions]
 
 
 if __name__ == "__main__":
