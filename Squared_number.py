@@ -1,2 +1,2 @@
 a=5
-print(a*a)
+print(a**2)  
